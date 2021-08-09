@@ -1,37 +1,11 @@
-
 import {marcaBolinha} from "./marcaBolinha.js";
+import {images, loadImages} from "./carregaImagens.js";
 
 'use strict';
 
-const containerBolinhas = document.getElementById('container-bolinhas');
-
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CARREGA IMAGENS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-const images = [
-    { 'name': 'chrono', 'url':'./img/chrono.jpg' },
-    { 'name': 'inuyasha', 'url':'./img/inuyasha.jpg' },
-    { 'name': 'tenchi', 'url':'./img/tenchi.jpg' },
-    { 'name': 'tenjhotenge', 'url':'./img/tenjhotenge.jpg' },
-    { 'name': 'yuyuhakusho', 'url':'./img/yuyuhakusho.jpg' },
-    { 'name': 'ippo', 'url':'./img/ippo.png' },
-]
-
 const containerItems = document.querySelector('#container-items');
-// const container = document.getElementById('container-items');
-
-const loadImages = function (images, container) {
-    images.forEach(image => {
-        // Observe o operador (+=) para que ele acumule os conteúdos (image) e não substitua (caso colocássemos só ()=) )
-        container.innerHTML += `
-            <div class='item'>
-                <img class='imagem' src='${image.url}'
-            </div>
-        `
-        addBolinha(image);
-    });
-}
-
 
 loadImages (images, containerItems);
 
@@ -39,21 +13,7 @@ marcaBolinha();
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CRIA BOLINHAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-// Ao carregar uma imagem, quero criar uma bolinha:
-// <div class="bolinha" id=""></div>
-// A id da bolinha deve receber o valor da propriedade 'name' da imagem.
-
-// Pegar o array das imagens, fazer um forEach nele e adicionar uma bolinha para cada item do array
-// A bolinha deve ser adicionada dentro da div 'container-bolinhas'
-
-
-function addBolinha(image) {
-    let criaBolinha = document.createElement('div');
-    criaBolinha.classList.add('bolinha');
-    criaBolinha.id = image.name;
-    containerBolinhas.appendChild(criaBolinha);
-}
+// Transferido para addBolinha.js
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MARCA BOLINHA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -79,7 +39,6 @@ function previous () {
     items = document.querySelectorAll('.item');
     marcaBolinha();
 }
-
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< EVETLISTENERS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
