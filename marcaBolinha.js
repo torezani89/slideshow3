@@ -4,7 +4,7 @@
 // Pegar todas as <div class='item'> <img class='imagem' src='${image.url}'</div>
 let imagens = document.querySelectorAll('.imagem');
 // Pegar todas as <div class="bolinha" id=""></div>
-const bolinhas = document.querySelectorAll('.bolinha');
+let bolinhas = document.querySelectorAll('.bolinha');
 
 let bolinha;
 
@@ -18,13 +18,14 @@ function achaBolinha() {
     }
 
     imagens = document.querySelectorAll('.imagem');
+    bolinhas = document.querySelectorAll('.bolinha');
     bolinhas.forEach(element => {
         if (imagens[1].src.indexOf(element.id) > -1) {
             bolinha = element;
-            return bolinha;
-
         }
     })
+
+    return bolinha;
 }
 
 // Já está sendo executado dentro de achaBolinha(), para não precisar fazer o forEach toda vez sobre o array
@@ -36,10 +37,9 @@ function achaBolinha() {
 // }
 
 function marcaBolinha() {
-    // resetaBolinhas();
     achaBolinha();
     bolinha.classList.add('bolinha-mark');
 }
 
-export {marcaBolinha, achaBolinha, bolinha};
+export {marcaBolinha};
 
