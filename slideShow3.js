@@ -1,5 +1,5 @@
 
-import {marcaBolinha, achaBolinha, bolinha} from "./marcaBolinha.js";
+import {marcaBolinha} from "./marcaBolinha.js";
 
 'use strict';
 
@@ -35,7 +35,7 @@ const loadImages = function (images, container) {
 
 loadImages (images, containerItems);
 
-// marcaBolinha();
+marcaBolinha();
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CRIA BOLINHAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
