@@ -3,13 +3,13 @@ import {images, loadImages} from "./carregaImagens.js";
 
 'use strict';
 
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ADD IMAGEM >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CARREGA IMAGENS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-const containerItems = document.querySelector('#container-items');
+let containerItems = document.querySelector('#container-items');
 
 loadImages (images, containerItems);
-
-marcaBolinha();
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CRIA BOLINHAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
