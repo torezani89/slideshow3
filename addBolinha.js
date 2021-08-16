@@ -5,7 +5,11 @@
 // Pegar o array das imagens, fazer um forEach nele e adicionar uma bolinha para cada item do array
 // A bolinha deve ser adicionada dentro da div 'container-bolinhas'
 
-const containerBolinhas = document.getElementById('container-bolinhas');
+let containerBolinhas = document.getElementById('container-bolinhas');
+
+function resetBolinhas() {
+    containerBolinhas.textContent = "";
+}
 
 function addBolinha(image) {
     let criaBolinha = document.createElement('div');
@@ -14,4 +18,4 @@ function addBolinha(image) {
     containerBolinhas.appendChild(criaBolinha);
 }
 
-export {addBolinha};
+export {addBolinha, resetBolinhas};
